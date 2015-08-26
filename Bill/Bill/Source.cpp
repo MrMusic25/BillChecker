@@ -1,5 +1,6 @@
 // This program calcualtes the tip based on a percentage and a bill total
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -25,8 +26,10 @@ int main()
 	
 	// Inform user of results
 	cout << "Perfecto!" << endl;
-	cout << "At a rate of " << tip << "%, the tip will be $" << tipAmount << "." << endl;
-	cout << "This brings your total bill to $" << total << "." << endl;
+	cout << "At a rate of " << tip;
+	cout << fixed;
+	cout << "%, the tip will be $" << setprecision(2) << tipAmount << "." << endl;
+	cout << "This brings your total bill to $" << setprecision(2) << total << "." << endl;
 
 	return 0;
 }
